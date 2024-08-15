@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html.lenis,
+      html.lenis body {
+        height: auto;
+      }
+
+      .lenis.lenis-smooth {
+        scroll-behavior: auto !important;
+      }
+
+      .lenis.lenis-smooth [data-lenis-prevent] {
+        overscroll-behavior: contain;
+      }
+
+      .lenis.lenis-stopped {
+        overflow: hidden;
+      }
+
+      .lenis.lenis-smooth iframe {
+        pointer-events: none;
+      }
+      .updownAnim {
+        animation: updown 1s infinite alternate;
+      }
+
+      @keyframes updown {
+        from {
+          transform: translateY(0);
+          opacity: 0.5;
+        }
+        to {
+          transform: translateY(-10px);
+          opacity: 1;
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parent w-full relative bg-zinc-900 h-[1800vh]">
+      <div class="sticky overflow-x-hidden top-0 left-0 w-full h-screen">
+        <canvas class="w-full h-screen" id="canvas"></canvas>
+        <div
+          class="animate1 absolute opacity-0 z-[2] text-white bottom-16 left-12 w-1/2"
+        >
+          <h1 class="leading-20 text-3xl font-[100]">&copy; 2024 DOZE STD</h1>
+          <h1 class="text-4xl">
+            SHAPING BRANDS <i class="fa-solid fa-arrow-right"></i> CRAFTING
+            MOTION
+          </h1>
+        </div>
+        <div
+          class="absolute animate2 flex z-[2] text-white bottom-16 opacity-0 w-1/2 right-10 text-right"
+        >
+          <h1 class="leading-20 font-[100] uppercase text-6xl">
+            Transforming Visions
+          </h1>
+          <h1 class="text-xl w-1/2">
+            Building identity and inspiring action. Sculpting digital
+            experiences.
+          </h1>
+        </div>
+        <div
+          class="absolute animate3 opacity-0 z-[2] text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center"
+        >
+          <h1 class="leading-20 font-[100] mb-4 uppercase text-6xl">
+            Elevating Aesthetics
+          </h1>
+          <h1 class="text-xl">
+            Crafting solutions and exploring new horizons. Evolving narratives
+            and elevating aesthetics in every project.
+          </h1>
+        </div>
+
+        <div
+          class="w-1/3 panel translate-x-full h-screen bg-white absolute right-0 top-0 z-[2] p-10"
+        >
+          <h3 class="panelelem text-xl font-[100]">2024 Doze.Std</h3>
+          <p class="panelelem mt-10 text-xl">
+            Sculpting Digital Transforming visions into digital realities.
+            Weaving stories that captivate and innovate. Exploring new
+            possibilities with a focus on narrative evolution. Crafting
+            solutions that engage and elevate.
+          </p>
+          <button
+            class="panelelem border-[1px] px-3 py-2 border-[#555] font-[100] mt-6"
+          >
+            Get Reviews
+          </button>
+          <div class="panelelem absolute bottom-10">
+            <h3 class="text-xl">Innovating Design</h3>
+            <p class="text-sm mt-3">
+              Connecting ideas to foster creativity. Designing impactful
+              experiences that resonate. Feel free to mix and match these
+              sections to suit your website's design needs!
+            </p>
+            <button
+              class="bg-black text-white px-7 text-sm mt-4 py-4 font-[100] capitalize"
+            >
+              experience
+            </button>
+          </div>
+        </div>
+        <div
+          class="absolute z-[2] panelism text-white opacity-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-6xl tracking-wide"
+        >
+          © Panelism
+          <span class="line w-10 h-1 bg-white inline-block"></span> 2048
+        </div>
+
+        <div class="instruct updownAnim absolute z-[2] bottom-10 left-[45%]">
+          <h1 class="text-xl font-light text-white upppercase">
+            SCROLL TO EXPERIENCE
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="extradiv w-full bg-white text-black p-10">
+      <h1 class="text-8xl tracking-tighter">&reg;Our recent works.</h1>
+      <div class="w-1/2 mt-32 headings flex flex-col gap-10 p-2">
+        <h3 class="text-7xl">Blorpt</h3>
+        <h3 class="text-7xl">Snorf</h3>
+        <h3 class="text-7xl">Wibbl</h3>
+        <h3 class="text-7xl">Flibby</h3>
+        <h3 class="text-7xl">Gloob</h3>
+        <h3 class="text-7xl">Trizzle</h3>
+        <h3 class="text-7xl">Frizzle</h3>
+        <h3 class="text-7xl">Plonk</h3>
+        <h3 class="text-7xl">Skizzle</h3>
+        <h3 class="text-7xl">Womble</h3>
+        <h3 class="text-7xl">Drizzle</h3>
+        <h3 class="text-7xl">Flonk</h3>
+        <h3 class="text-7xl">Snizzle</h3>
+        <h3 class="text-7xl">Gribble</h3>
+        <h3 class="text-7xl">Blibble</h3>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/15526767ae.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
