@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
     <style>
       html.lenis,
       html.lenis body {
@@ -45,6 +46,50 @@
   <body>
     <div class="parent w-full relative bg-zinc-900 h-[1800vh]">
       <div class="sticky overflow-x-hidden top-0 left-0 w-full h-screen">
+        <div
+          style="background-color: black"
+          class="loader w-full min-h-screen bg-zinc-900 text-white flex items-center justify-center fixed top-0 left-0 z-[999]"
+        >
+          <div class="relative flex gap-6 text-4xl">
+            <h1 id="loaderCont" style="overflow: hidden" class="flex">
+              <span>L</span>
+              <span>o</span>
+              <span>a</span>
+              <span>d</span>
+              <span>i</span>
+              <span>n</span>
+              <span>g</span>
+              <span>&nbsp;</span>
+              <span>Y</span>
+              <span>o</span>
+              <span>u</span>
+              <span>r</span>
+              <span>&nbsp;</span>
+              <span>E</span>
+              <span>x</span>
+              <span>p</span>
+              <span>e</span>
+              <span>r</span>
+              <span>i</span>
+              <span>e</span>
+              <span>n</span>
+              <span>c</span>
+              <span>e</span>
+            </h1>
+            <h1 id="percentLoaded">0%</h1>
+            <div
+              style="
+                height: 4px;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: white;
+                border-radius: 6px;
+              "
+              class="loaderLine mt-6"
+            ></div>
+          </div>
+        </div>
         <canvas class="w-full h-screen" id="canvas"></canvas>
         <div
           class="animate1 absolute opacity-0 z-[2] text-white bottom-16 left-12 w-1/2"
@@ -141,6 +186,24 @@
         <h3 class="text-7xl">Blibble</h3>
       </div>
     </div>
+    <footer>
+      <div id="abtProject">
+        <p>Made with Love & Creativity By PRIYANSHU!</p>
+        <a href="tel:+918057607415">Make a call</a>
+        <a href="mailto:jashram826@gmail.com">Leave a mail</a>
+      </div>
+      <div id="socials">
+        <a href="https://github.com/Priyanshu43A">github</a>
+        <a href="https://priyanshu-web-dev-portfolio.vercel.app/">portfolio</a>
+        <a href="https://www.instagram.com/webdev.priyanshu/">instagram</a>
+        <a href="https://x.com/Priyans29193156">X</a>
+        <a href="https://www.youtube.com/@gwpriyanshu43">Youtube</a>
+      </div>
+      <div>
+        <a href="./README.md" download="./README.md">About the project</a>
+        <span>| August 17, 2024 IST</span>
+      </div>
+    </footer>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
       integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="

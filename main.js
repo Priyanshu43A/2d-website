@@ -14,6 +14,17 @@ const images = [];
 //keeping track of loaded images
 let imagesLoaded = 0;
 
+function showpercentage(loaded) {
+  const percentage = (loaded / frames.maxIndex) * 100;
+  console.log(`Loading images... ${percentage.toFixed(0)}%`);
+  document.querySelector("#percentLoaded").innerHTML = `${percentage.toFixed(
+    0
+  )}%`;
+  document.querySelector(".loaderLine").style.width = `${percentage.toFixed(
+    0
+  )}%`;
+}
+
 //making a function to check, load and store all the images so website will run smoothly......
 function preloadImages() {
   for (let i = 1; i <= frames.maxIndex; i++) {
@@ -26,11 +37,20 @@ function preloadImages() {
     //function to keep track on images loading
     image.onload = () => {
       imagesLoaded++;
-
+      showpercentage(imagesLoaded);
       //function to execute tasks after successfull loading of images
       if (imagesLoaded === frames.maxIndex) {
         loadImage(frames.currentIndex);
         startAnimation();
+
+        gsap.to(document.querySelector(".loader"), {
+          //display: "none",
+          opacity: 1,
+          transform: "translateY(-100%)",
+          duration: 1,
+          ease: "ease",
+        });
+        //document.querySelector(".loader").style.display = "none";
         console.log("all images loaded successfully");
       }
     };
@@ -291,3 +311,23 @@ document.querySelectorAll(".headings h3").forEach((elem) => {
     opacity: 0.2,
   });
 });
+
+gsap.from("#loaderCont span", {
+  y: 100,
+  duration: 1,
+  opacity: 0,
+
+  ease: "elastic.out(1,0.3)",
+  stagger: 0.05,
+  repeat: -1,
+});
+
+// gsap.from("#percentLoaded", {
+//   duration: 0.2,
+
+//   opacity: 0,
+
+//   ease: "power4.out",
+
+//   repeat: -1,
+// });

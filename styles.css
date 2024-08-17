@@ -1,0 +1,76 @@
+* {
+  user-select: none;
+}
+
+footer {
+  min-height: 30vh;
+  background-color: rgb(19, 19, 19);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+footer > div {
+  flex-grow: 1;
+  width: 30%;
+}
+
+#abtProject {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+#abtProject a {
+  width: 50%;
+}
+
+#socials {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  height: fit-content;
+  gap: 12px;
+}
+
+footer a {
+  display: inline-flex;
+  width: 120px;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  border-radius: 24px;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+
+  text-transform: uppercase;
+}
+
+footer > div:nth-last-child(1) {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer > div:nth-last-child(1) a {
+  border: none;
+  padding: 2px;
+  color: rgb(0, 148, 0);
+  width: fit-content;
+  white-space: none;
+  font-weight: bold;
+  padding-right: 6px;
+  border-radius: 0%;
+  background-color: transparent;
+}
+
+footer > div:nth-last-child(1) a:hover {
+  text-decoration: underline;
+}
+
+footer a:hover {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
